@@ -1,0 +1,254 @@
+/* Import premium fonts for a modern, fintech-inspired look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global styles */
+body {
+    background: linear-gradient(135deg, #1a2a6c, #00d4ff, #1a2a6c); /* Vibrant blue-teal gradient */
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite; /* Subtle background animation */
+    font-family: 'Inter', sans-serif;
+    color: #1a202c;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Background animation for a dynamic effect */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container for additional centering control */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Max width for larger screens */
+    min-height: 100vh; /* Ensure full viewport height */
+    padding: 15px;
+}
+
+/* Card styling for a premium, centered, payment app-like look */
+.card {
+    background: linear-gradient(145deg, #ffffff, #e6e6fa); /* Subtle white-lavender gradient */
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 212, 255, 0.3); /* Glow effect */
+    padding: 35px;
+    width: 100%;
+    max-width: 500px; /* Consistent card width */
+    animation: cardPop 0.8s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card pop-in animation */
+@keyframes cardPop {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Headings */
+h3 {
+    font-weight: 700;
+    color: #1a2a6c;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form inputs */
+.form-control, .form-select {
+    border-radius: 12px;
+    border: 1px solid #00d4ff; /* Teal border for vibrancy */
+    padding: 14px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #ffd700; /* Gold accent on focus */
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+    background: #fff;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(to right, #00d4ff, #1a2a6c); /* Vibrant gradient */
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 212, 255, 0.5); /* Glowing hover */
+    background: linear-gradient(to right, #1a2a6c, #00d4ff);
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn-primary:hover::after {
+    width: 200px;
+    height: 200px;
+}
+
+.btn-secondary, .btn-info, .btn-danger {
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secondary {
+    background: #6b7280;
+}
+
+.btn-info {
+    background: #3b82f6;
+}
+
+.btn-danger {
+    background: #ef4444;
+}
+
+.btn-secondary:hover, .btn-info:hover, .btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-color: #00d4ff;
+    border-right-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+/* Success page checkmark */
+.fa-check-circle {
+    color: #22c55e; /* Vibrant green */
+    font-size: 72px;
+    animation: bounceIn 0.6s ease;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Table styling for history page */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 16px;
+    font-size: 15px;
+}
+
+.table thead {
+    background: linear-gradient(to right, #1a2a6c, #00d4ff);
+    color: #fff;
+    font-weight: 600;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background: #f1f5f9;
+}
+
+/* Security note styling */
+.text-muted {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 25px;
+    color: #9ca3af;
+    font-style: italic;
+}
+
+/* Button group on dashboard */
+.mt-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+    .card {
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .form-control, .form-select, .btn {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .fa-check-circle {
+        font-size: 56px;
+    }
+}
+
+/* Subtle background particles for a futuristic effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.3)"/><circle cx="90" cy="90" r="3" fill="rgba(255,215,0,0.2)"/><circle cx="50" cy="30" r="2" fill="rgba(0,212,255,0.3)"/></svg>');
+    background-size: 300px;
+    opacity: 0.1;
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% { background-position: 0 0; }
+    50% { background-position: 100px 100px; }
+    100% { background-position: 0 0; }
+}
